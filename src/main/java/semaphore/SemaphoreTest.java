@@ -17,7 +17,6 @@ public class SemaphoreTest {
                     try {
                         semaphore.acquire();//获取信号灯许可
                     } catch (InterruptedException e) {
-                        // TODO Auto-generated catch block
                         e.printStackTrace();
                     }
                     System.out.println("Thread "+Thread.currentThread().getName()+" 进入" +"当前系统的并发数是："+(3-semaphore.availablePermits()));
