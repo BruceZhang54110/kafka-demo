@@ -1,0 +1,27 @@
+server:
+  port: 8988
+dlink:
+  kafka:
+    topic:
+      sdata: dlink
+      tr:
+        pull: dlink_tr_pull
+        state: dlink_tr_state
+demo: 
+  topic: test_zhw
+logging:
+  path: /opt/app/test_kafka/logs
+spring:
+  kafka:
+    bootstrap-servers: 192.168.1.73:9092,192.168.1.74:9092,192.168.1.212:9092
+    consumer:
+      #group-id: test_zhw_group
+      group-id: dlink_group_1
+      auto-commit-interval: 100
+      auto-offset-reset: latest
+      
+      
+    listener:
+      concurrency: 1
+
+      
